@@ -1,0 +1,5 @@
+server=/opt/minecraft/server
+screenName=minecraftServer
+backup=/opt/backup
+maxRam=3418
+cpu=1
