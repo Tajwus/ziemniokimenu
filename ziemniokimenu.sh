@@ -47,7 +47,7 @@ function z1 {
 
    function c2 {
       clear
-		echo "Type version of minecraft:"
+      echo "Type version of minecraft:"
       echo "1.17-1.17.1"
       echo "1.18-1.18.2"
       echo "1.19-1.19.4"
