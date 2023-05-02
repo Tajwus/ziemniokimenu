@@ -13,7 +13,7 @@ while true; do
     case $download in
         "1.17" | "1.17.1" | "1.18" | "1.18.1" | "1.18.2" | "1.19" | "1.19.1" | "1.19.2" | "1.19.3" | "1.19.4")
             sudo apt update
-            yes | sudo apt install htop screen wget
+            yes | sudo apt install htop screen wget openjdk-17-jdk
             wget https://download.getbukkit.org/spigot/spigot-$download.jar
 
             wget https://github.com/Tajwus/ziemniokimenu/archive/refs/tags/Update_v1.tar.gz
@@ -22,12 +22,6 @@ while true; do
             mv spigot-$download.jar /opt/minecraft/server/server.jar
             chmod +x -R /opt/minecraft
             rm Update_v1.tar.gz ziemniokimenu-Update_v1
-
-            wget https://raw.githubusercontent.com/chrishantha/install-java/master/install-java.sh
-            wget http://g09.rfox.cloud/jdk17.tar.gz
-            chmod +x install-java.sh
-            yes | ./install-java.sh -f jdk17.tar.gz
-            rm -r install-java.sh jdk17.tar.gz
 
             crontab -l > mycron
             echo "0 4 * * * /opt/minecraft/scripts/backup.sh" >> mycron
